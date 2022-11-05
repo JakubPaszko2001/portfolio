@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.char {
+  transform: translateY(115px);
+  transition: transform 0.5s;
+}
+.clippath {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}

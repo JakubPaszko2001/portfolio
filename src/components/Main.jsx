@@ -13,13 +13,47 @@ const Main = () => {
     const jobSplit = new SplitType("#job");
     const tl = gsap.timeline();
 
-    tl.to(".char", { y: 0, stagger: 0.05, delay: 0.2, duration: 0.4 })
+    tl.to(".char", { y: 0, stagger: 0.05, delay: 0.2, duration: 0.1 })
       .fromTo(
         ".hamburger",
         { y: "20", opacity: 0 },
         { y: 0, opacity: 1, duration: 1 }
       )
-      .from("icon1", { y: 20, opacity: 0, duration: 0.5 });
+      .fromTo(
+        ".icon1",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
+      )
+      .fromTo(
+        ".icon2",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
+      )
+      .fromTo(
+        ".icon3",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
+      )
+      .fromTo(
+        ".menuItem1",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
+      )
+      .fromTo(
+        ".menuItem2",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
+      )
+      .fromTo(
+        ".menuItem3",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
+      )
+      .fromTo(
+        ".menuItem4",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
+      );
   });
 
   return (
@@ -33,15 +67,29 @@ const Main = () => {
       >
         <div className="fixed top-0 left-0 items-center justify-between w-screen h-40 px-4 lg:px-20 hidden md:flex">
           <div className="flex text-5xl">
-            <AiFillLinkedin />
-            <AiFillGithub />
-            <AiFillFacebook />
+            <div className="icon1 cursor-pointer iconAnimation">
+              <AiFillLinkedin />
+            </div>
+            <div className="icon2 cursor-pointer iconAnimation">
+              <AiFillGithub />
+            </div>
+            <div className="icon3 cursor-pointer iconAnimation">
+              <AiFillFacebook />
+            </div>
           </div>
           <div className="flex text-3xl xl:text-4xl">
-            <h1 className="mr-2">About |</h1>
-            <h1 className="mr-2">Skills |</h1>
-            <h1 className="mr-2">Projects |</h1>
-            <h1>Contact</h1>
+            <h1 className="menuItem1 cursor-pointer mr-2 underlineText">
+              About |
+            </h1>
+            <h1 className="menuItem2 cursor-pointer mr-2 underlineText">
+              Skills |
+            </h1>
+            <h1 className="menuItem3 cursor-pointer mr-2 underlineText">
+              Projects |
+            </h1>
+            <h1 className="menuItem4 cursor-pointer underlineText hover:after:w-full">
+              Contact
+            </h1>
           </div>
         </div>
         <h1 id="name" className="text-5xl clippath lg:text-7xl">

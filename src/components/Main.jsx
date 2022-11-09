@@ -29,7 +29,6 @@ const Main = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  // Animacje
   useEffect(() => {
     // Funkcja navbaru
     const nav = document.querySelector(".navbar");
@@ -44,6 +43,7 @@ const Main = () => {
       lastScrollY = window.scrollY;
     });
 
+    // Animacje
     const nameSplit = new SplitType("#name");
     const jobSplit = new SplitType("#job");
     const tl = gsap.timeline();
@@ -168,6 +168,7 @@ const Main = () => {
         onClick={() => {
           const hamburgerTl = gsap.timeline();
           hamburgerTl.to(".hamburgerMenu", { x: 0, duration: 0.6 });
+          hamburgerTl.from(".hamburgerIcons", { opacity: 0, duration: 0.2 });
           hamburgerTl.from(".hamburgerEl1", { opacity: 0, duration: 0.2 });
           hamburgerTl.from(".hamburgerEl2", { opacity: 0, duration: 0.2 });
           hamburgerTl.from(".hamburgerEl3", { opacity: 0, duration: 0.2 });
@@ -177,7 +178,28 @@ const Main = () => {
       >
         <GiHamburgerMenu />
       </div>
+      <div
+        onClick={handleThemeSwitch}
+        className="darkModeIcon absolute right-10 bottom-10 cursor-pointer md:hidden"
+      >
+        {backgroundImage ? (
+          <TbMoon className="p-2 rounded-md text-5xl text-light bg-dark" />
+        ) : (
+          <ImSun className="p-2 rounded-md text-5xl text-dark bg-light" />
+        )}
+      </div>
       <div className="hamburgerMenu absolute top-0 left-0 translate-x-[-100%] h-full w-1/2 flex justify-center items-center bg-light dark:bg-dark">
+        <div className="hamburgerIcons absolute top-10 w-full flex justify-center text-5xl dark:text-light">
+          <div className="cursor-pointer iconAnimation">
+            <AiFillLinkedin />
+          </div>
+          <div className="cursor-pointer iconAnimation">
+            <AiFillGithub />
+          </div>
+          <div className="cursor-pointer iconAnimation">
+            <AiFillFacebook />
+          </div>
+        </div>
         <div className="h-1/3 flex flex-col justify-between text-3xl dark:text-light">
           <h1 className="hamburgerEl1">About</h1>
           <h1 className="hamburgerEl2">Skills</h1>

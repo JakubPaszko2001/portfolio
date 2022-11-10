@@ -52,7 +52,12 @@ const Main = () => {
       .fromTo(
         ".hamburger",
         { y: "20", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }
+        { y: 0, opacity: 1, duration: 0.2 }
+      )
+      .fromTo(
+        ".darkModeIconPhone",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
       )
       .fromTo(
         ".icon1",
@@ -112,9 +117,9 @@ const Main = () => {
         ref={wrapper}
         className="w-full h-full flex flex-col justify-center items-center"
       >
-        <div
+        <nav
           id="navbar"
-          className="navbar fixed top-0 left-0 items-center justify-between w-screen transition-transform duration-700 h-40 px-4 lg:px-20 hidden md:flex"
+          className="navbar fixed top-0 left-0 items-center justify-between w-screen transition-transform duration-700 h-40 px-6 lg:px-20 hidden md:flex"
         >
           <div className="flex text-5xl dark:text-light">
             <div className="icon1 cursor-pointer iconAnimation">
@@ -141,15 +146,21 @@ const Main = () => {
               Contact
             </h1>
           </div>
-        </div>
-        <h1 id="name" className="text-5xl clippath dark:text-light lg:text-7xl">
+        </nav>
+        <header
+          id="name"
+          className="text-5xl clippath dark:text-light lg:text-7xl"
+        >
           Jakub Paszko
-        </h1>
-        <h1 id="job" className="text-2xl clippath dark:text-light lg:text-4xl">
+        </header>
+        <header
+          id="job"
+          className="text-2xl clippath dark:text-light lg:text-4xl"
+        >
           Frontend Developer
-        </h1>
+        </header>
       </div>
-      <div className="absolute bottom-0 w-full h-40 px-4 hidden md:flex md:justify-center md:items-center lg:px-20">
+      <footer className="absolute bottom-0 w-full h-40 px-4 hidden md:flex md:justify-center md:items-center lg:px-20">
         <h1 className="email font-main text-2xl dark:text-light xl:text-4xl">
           jakubpaszko01@gmail.com
         </h1>
@@ -158,12 +169,12 @@ const Main = () => {
           className="darkModeIcon absolute right-4 cursor-pointer lg:right-20"
         >
           {backgroundImage ? (
-            <TbMoon className="p-2 rounded-md text-5xl text-light bg-dark" />
+            <TbMoon className="p-2 rounded-md text-5xl text-light bg-dark hover:text-yellow-500" />
           ) : (
-            <ImSun className="p-2 rounded-md text-5xl text-dark bg-light" />
+            <ImSun className="p-2 rounded-md text-5xl text-dark bg-light hover:text-yellow-500" />
           )}
         </div>
-      </div>
+      </footer>
       <div
         onClick={() => {
           const hamburgerTl = gsap.timeline();
@@ -180,7 +191,7 @@ const Main = () => {
       </div>
       <div
         onClick={handleThemeSwitch}
-        className="darkModeIcon absolute right-10 bottom-10 cursor-pointer md:hidden"
+        className="darkModeIconPhone absolute right-10 bottom-10 cursor-pointer md:hidden"
       >
         {backgroundImage ? (
           <TbMoon className="p-2 rounded-md text-5xl text-light bg-dark" />
@@ -188,7 +199,7 @@ const Main = () => {
           <ImSun className="p-2 rounded-md text-5xl text-dark bg-light" />
         )}
       </div>
-      <div className="hamburgerMenu absolute top-0 left-0 translate-x-[-100%] h-full w-1/2 flex justify-center items-center bg-light dark:bg-dark">
+      <nav className="hamburgerMenu absolute top-0 left-0 translate-x-[-100%] h-full w-1/2 flex justify-center items-center bg-light dark:bg-dark">
         <div className="hamburgerIcons absolute top-10 w-full flex justify-center text-5xl dark:text-light">
           <div className="cursor-pointer iconAnimation">
             <AiFillLinkedin />
@@ -214,7 +225,7 @@ const Main = () => {
         >
           <CgClose />
         </div>
-      </div>
+      </nav>
     </div>
   );
 };

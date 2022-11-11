@@ -15,13 +15,12 @@ const About = () => {
         scrub: 2,
       },
       opacity: 1,
-      y: 200,
     });
   });
 
   return (
     <div>
-      <div className="first flex justify-center items-center h-screen w-screen bg-light dark:bg-dark">
+      <div className="first flex justify-center items-center h-screen w-screen bg-black dark:bg-dark">
         <h1 className="text">Hello Hello</h1>
       </div>
       <div className="second h-screen w-screen bg-black"></div>

@@ -21,7 +21,7 @@ const About = () => {
   return (
     <div>
       <div className="first flex justify-center items-center h-screen w-screen bg-black dark:bg-dark">
-        <h1 className="text">Hello Hello</h1>
+        <h1 className="text text-white">Hello Hello</h1>
       </div>
       <div className="second h-screen w-screen bg-black"></div>
     </div>

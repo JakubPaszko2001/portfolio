@@ -23,7 +23,7 @@ const Main = () => {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
-
+  // Dodac gsap.context revert aby wlaczyc od nowa animacje https://greensock.com/docs/v3/GSAP/gsap.context()
   // Przycisk zmiany light/dark
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");

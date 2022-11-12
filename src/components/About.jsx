@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -6,27 +6,46 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to(".texttt", {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".first",
-          markers: true,
+          scrub: 1,
+          pin: true,
           start: "top top",
-          end: "+=400",
-          pin: ".first",
-          scrub: 2,
+          // end: "+=400",
         },
-        opacity: 0,
       });
+
+      tl.from(".texttt", { y: 50, opacity: 0 });
+      tl.to(".texttt", { opacity: 0 });
+      tl.fromTo(".dalej", { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
+      tl.fromTo(".dalej", { opacity: 1 }, { opacity: 0 });
+      tl.fromTo(".next", { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
     });
     return () => ctx.revert();
   }, []);
 
   return (
     <div>
-      <div className="first flex justify-center items-center h-screen w-screen bg-light dark:bg-dark">
-        <h1 className="texttt">Hello Hello</h1>
+      {/* <div className="first flex justify-center items-center h-screen w-screen bg-light dark:bg-dark">
+        <h1 className="texttt text-5xl">Hello Hello</h1>
+      </div> */}
+      <div className="first relative h-screen w-screen bg-light dark:bg-dark">
+        <h1 className="texttt absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
+          About me
+        </h1>
+        <h1 className="dalej absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
+          I'm creative web developer
+        </h1>
+        <h1 className="next absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
+          I'm creative web developer
+        </h1>
       </div>
-      <div className="second h-screen w-screen bg-black"></div>
+      <div className="second relative h-screen w-screen bg-black">
+        <h1 className="text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl">
+          Hello
+        </h1>
+      </div>
     </div>
   );
 };

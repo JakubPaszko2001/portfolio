@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import bg from "../Image/bg.webp";
 import bgDark from "../Image/bgDark.webp";
+import Loading from "../Image/loading.gif";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
@@ -13,6 +14,12 @@ const Main = () => {
   const [theme, setTheme] = useState("light");
   const [backgroundImage, setBackgroundImage] = useState(true);
 
+  // Preload
+  window.addEventListener("load", function () {
+    var loader = document.querySelector(".preload");
+    loader.classList.add("hidden");
+  });
+
   useEffect(() => {
     // Funkcja zmiany background i trybu dark
     if (theme === "dark") {
@@ -23,8 +30,6 @@ const Main = () => {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
-  // Dodac gsap.context revert aby wlaczyc od nowa animacje https://greensock.com/docs/v3/GSAP/gsap.context()
-  // Przycisk zmiany light/dark
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -113,6 +118,11 @@ const Main = () => {
         backgroundImage: `url(${backgroundImage ? bg : bgDark})`,
       }}
     >
+      {/* Preaload */}
+      <div className="preload fixed w-screen h-screen flex justify-center items-center bg-[#F8F8F8] z-[100]">
+        <img src={Loading} />
+      </div>
+      {/* Site */}
       <div
         ref={wrapper}
         className="w-full h-full flex flex-col justify-center items-center"

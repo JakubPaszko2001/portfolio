@@ -30,7 +30,7 @@ const About = () => {
       {/* <div className="first flex justify-center items-center h-screen w-screen bg-light dark:bg-dark">
         <h1 className="texttt text-5xl">Hello Hello</h1>
       </div> */}
-      <div className="first relative h-screen w-screen bg-light dark:bg-dark">
+      <div className="first relative h-screen w-screen font-main bg-light dark:bg-dark">
         <h1 className="texttt absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           About me
         </h1>
@@ -39,11 +39,6 @@ const About = () => {
         </h1>
         <h1 className="next absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           I'm creative web developer
-        </h1>
-      </div>
-      <div className="second relative h-screen w-screen bg-black">
-        <h1 className="text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl">
-          Hello
         </h1>
       </div>
     </div>

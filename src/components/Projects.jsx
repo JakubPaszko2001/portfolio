@@ -2,7 +2,7 @@ import React from "react";
 import hacjenda from "../Image/hacjenda.webp";
 const Projects = () => {
   return (
-    <div className="w-screen font-main bg-light">
+    <div className="w-screen font-main bg-light dark:bg-dark">
       <main>
         <header className="text-center text-5xl mb-12 xl:text-7xl">
           Projects

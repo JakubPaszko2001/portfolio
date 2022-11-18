@@ -46,12 +46,13 @@ const Main = () => {
 
       lastScrollY = window.scrollY;
     });
+  });
 
+  useEffect(() => {
     // Animacje
     const nameSplit = new SplitType("#name");
     const jobSplit = new SplitType("#job");
     const tl = gsap.timeline();
-
     tl.to("#preloadText", { opacity: 0, delay: 1.6 })
       .to(".preload", { y: "-100%", duration: 1 })
       .to(".char", { y: 0, stagger: 0.05, delay: 0.5, duration: 0.1 })
@@ -110,7 +111,7 @@ const Main = () => {
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.2 }
       );
-  });
+  }, []);
 
   const logo = document.querySelectorAll("#logo path");
   console.log(logo);

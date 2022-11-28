@@ -28,37 +28,37 @@
 #preloadText path:nth-child(2) {
   stroke-dasharray: 427;
   stroke-dashoffset: 427;
-  animation: animationText 2s ease forwards;
+  animation: animationText 3s ease forwards;
 }
 #preloadText path:nth-child(3) {
   stroke-dasharray: 316;
   stroke-dashoffset: 316;
-  animation: animationText 2s ease forwards;
+  animation: animationText 3s ease forwards;
 }
 #preloadText path:nth-child(4) {
   stroke-dasharray: 410;
   stroke-dashoffset: 410;
-  animation: animationText 2s ease forwards;
+  animation: animationText 3s ease forwards;
 }
 #preloadText path:nth-child(5) {
   stroke-dasharray: 460;
   stroke-dashoffset: 460;
-  animation: animationText 2s ease forwards;
+  animation: animationText 3s ease forwards;
 }
 #preloadText path:nth-child(6) {
   stroke-dasharray: 223;
   stroke-dashoffset: 223;
-  animation: animationText 2s ease forwards;
+  animation: animationText 3s ease forwards;
 }
 #preloadText path:nth-child(7) {
   stroke-dasharray: 391;
   stroke-dashoffset: 391;
-  animation: animationText 2s ease forwards;
+  animation: animationText 3s ease forwards;
 }
 #preloadText path:nth-child(8) {
   stroke-dasharray: 617;
   stroke-dashoffset: 617;
-  animation: animationText 2s ease forwards;
+  animation: animationText 3s ease forwards;
 }
 @keyframes animationText {
   to {

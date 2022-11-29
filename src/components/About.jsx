@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import zdjecie from "../Image/zdjecie.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -37,9 +38,9 @@ const About = () => {
         <h1 className="dalej absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           I'm creative web developer
         </h1>
-        <h1 className="next absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
-          I'm creative web developer
-        </h1>
+        <div className="next absolute flex justify-center items-center h-full text-3xl max-h-screen">
+          <img src={zdjecie}></img>
+        </div>
       </div>
     </div>
   );

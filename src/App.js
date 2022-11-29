@@ -8,8 +8,8 @@ function App() {
     <div className="App overflow-hidden">
       <Main />
       <About />
-      <Projects />
-      <Contact />
+      {/* <Projects />
+      <Contact /> */}
     </div>
   );
 }

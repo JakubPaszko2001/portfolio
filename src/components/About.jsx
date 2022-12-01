@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import zdjecie from "../Image/zdjecie.jpg";
+import pillars from "../Image/pillars.webp";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -19,9 +20,16 @@ const About = () => {
 
       tl.from(".texttt", { y: 50, opacity: 0 });
       tl.to(".texttt", { opacity: 0 });
-      tl.fromTo(".dalej", { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
-      tl.fromTo(".dalej", { opacity: 1 }, { opacity: 0 });
-      tl.fromTo(".next", { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
+      // tl.fromTo(".dalej", { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
+      // tl.fromTo(".dalej", { opacity: 1 }, { opacity: 0 });
+      // tl.fromTo(".filarLeft", { x: -50 }, { x: 0 });
+      tl.fromTo(".filarLeft", { opacity: 0 }, { opacity: 1, duration: 0.4 });
+      tl.fromTo(
+        ".filarRight",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4 },
+        "-=0.4"
+      );
     });
     return () => ctx.revert();
   }, []);
@@ -35,12 +43,19 @@ const About = () => {
         <h1 className="texttt absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           About me
         </h1>
-        <h1 className="dalej absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
-          I'm creative web developer
-        </h1>
-        <div className="next absolute flex justify-center items-center h-full text-3xl max-h-screen">
-          <img src={zdjecie}></img>
+        <div className="next relative h-screen text-3xl">
+          <img
+            className="filarLeft absolute left-0 -translate-x-1/2 top-1/2 rotate-90 -translate-y-1/2"
+            src={pillars}
+          ></img>
+          <img
+            className="filarRight absolute right-0 translate-x-1/2 bottom-1/2 rotate-[-90deg] translate-y-1/2"
+            src={pillars}
+          ></img>
         </div>
+        {/* <div className="next absolute flex justify-center items-center h-full text-3xl max-h-screen">
+          <img src={zdjecie}></img>
+        </div> */}
       </div>
     </div>
   );

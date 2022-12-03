@@ -19,17 +19,59 @@ const About = () => {
         },
       });
 
-      tl.from(".texttt", { y: 50, opacity: 0 });
-      tl.to(".texttt", { opacity: 0 });
-      // tl.fromTo(".dalej", { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
-      // tl.fromTo(".dalej", { opacity: 1 }, { opacity: 0 });
-      // tl.fromTo(".filarLeft", { x: -50 }, { x: 0 });
-      tl.fromTo(".filarLeft", { opacity: 0 }, { opacity: 1, duration: 0.4 });
+      tl.from(".texttt", { y: 50, opacity: 0, duration: 200 });
+      tl.to(".texttt", { opacity: 0, duration: 200 });
+      tl.fromTo(".firstRowLeftCol", { x: "-150%" }, { x: 0, duration: 10000 });
       tl.fromTo(
-        ".filarRight",
+        ".firstRowRightCol",
+        { x: "150%" },
+        { x: 0, duration: 10000 },
+        "-=10000"
+      );
+      tl.fromTo(
+        ".firstRowText",
         { opacity: 0 },
-        { opacity: 1, duration: 0.4 },
-        "-=0.4"
+        { opacity: 1, duration: 10000 },
+        "-=10000"
+      );
+      tl.fromTo(".secondRowLeftCol", { x: "-150%" }, { x: 0, duration: 1000 });
+      tl.fromTo(
+        ".secondRowRightCol",
+        { x: "150%" },
+        { x: 0, duration: 1000 },
+        "-=1000"
+      );
+      tl.fromTo(
+        ".secondRowText",
+        { opacity: 0 },
+        { opacity: 1, duration: 1000 },
+        "-=1000"
+      );
+      tl.fromTo(".thirdRowLeftCol", { x: "-150%" }, { x: 0, duration: 1000 });
+      tl.fromTo(
+        ".thirdRowRightCol",
+        { x: "150%" },
+        { x: 0, duration: 1000 },
+        "-=1000"
+      );
+      tl.fromTo(
+        ".thirdRowText",
+        { opacity: 0 },
+        { opacity: 1, duration: 1000 },
+        "-=1000"
+      );
+      tl.fromTo(".fourthRowLeftCol", { x: "-150%" }, { x: 0, duration: 1000 });
+      tl.fromTo(
+        ".fourthRowRightCol",
+        { x: "150%" },
+        { x: 0, duration: 1000 },
+        "-=1000"
+      );
+      tl.fromTo(
+        ".fourthRowText",
+        { opacity: 0 },
+        { opacity: 1, duration: 1000 },
+        "-=1000"
       );
     });
     return () => ctx.revert();
@@ -41,21 +83,21 @@ const About = () => {
         <h1 className="texttt absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           About me
         </h1>
-        <div className="filarLeft grid grid-rows-6 grid-cols-4 h-screen w-screen bg-black">
+        <div className="grid grid-rows-6 grid-cols-4 h-screen w-screen text-black">
           {/* First Row */}
           <div className="flex justify-start col-start-1 row-start-2">
             <img
-              className="object-contain h-full rotate-90"
+              className="firstRowLeftCol object-contain h-full rotate-90"
               alt="column"
               src={column}
             />
           </div>
-          <div className="flex justify-center items-center col-start-2 row-start-2 col-span-2 text-light">
-            <h1>Creative</h1>
+          <div className="flex justify-center items-center col-start-2 row-start-2 col-span-2 ">
+            <h1 className="firstRowText text-2xl">Creative</h1>
           </div>
           <div className="flex justify-end col-start-4 row-start-2">
             <img
-              className="object-contain h-full rotate-[270deg]"
+              className="firstRowRightCol object-contain h-full rotate-[270deg]"
               src={column}
               alt="column"
             />
@@ -63,17 +105,17 @@ const About = () => {
           {/* Second Row */}
           <div className="flex justify-start col-start-1 row-start-3">
             <img
-              className="object-contain h-full rotate-90"
+              className="secondRowLeftCol object-contain h-full rotate-90"
               alt="column"
               src={column}
             />
           </div>
-          <div className="flex justify-center items-center col-start-2 row-start-3 col-span-2 text-light">
-            <h1>Creative</h1>
+          <div className="flex justify-center items-center col-start-2 row-start-3 col-span-2 ">
+            <h1 className="secondRowText text-2xl">Creative</h1>
           </div>
           <div className="flex justify-end col-start-4 row-start-3">
             <img
-              className="object-contain h-full rotate-[270deg]"
+              className="secondRowRightCol object-contain h-full rotate-[270deg]"
               src={column}
               alt="column"
             />
@@ -81,17 +123,17 @@ const About = () => {
           {/* Third Row */}
           <div className="flex justify-start col-start-1 row-start-4">
             <img
-              className="object-contain h-full rotate-90"
+              className="thirdRowLeftCol object-contain h-full rotate-90"
               alt="column"
               src={column}
             />
           </div>
-          <div className="flex justify-center items-center col-start-2 row-start-4 col-span-2 text-light">
-            <h1>Creative</h1>
+          <div className="flex justify-center items-center col-start-2 row-start-4 col-span-2 ">
+            <h1 className="thirdRowText text-2xl">Creative</h1>
           </div>
           <div className="flex justify-end col-start-4 row-start-4">
             <img
-              className="object-contain h-full rotate-[270deg]"
+              className="thirdRowRightCol object-contain h-full rotate-[270deg]"
               src={column}
               alt="column"
             />
@@ -99,17 +141,17 @@ const About = () => {
           {/* Fourth Row */}
           <div className="flex justify-start col-start-1 row-start-5">
             <img
-              className="object-contain h-full rotate-90"
+              className="fourthRowLeftCol object-contain h-full rotate-90"
               alt="column"
               src={column}
             />
           </div>
-          <div className="flex justify-center items-center col-start-2 row-start-5 col-span-2 text-light">
-            <h1>Creative</h1>
+          <div className="flex justify-center items-center col-start-2 row-start-5 col-span-2 ">
+            <h1 className="fourthRowText text-2xl">Creative</h1>
           </div>
           <div className="flex justify-end col-start-4 row-start-5">
             <img
-              className="object-contain h-full rotate-[270deg]"
+              className="fourthRowRightCol object-contain h-full rotate-[270deg]"
               src={column}
               alt="column"
             />

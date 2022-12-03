@@ -19,8 +19,8 @@ const About = () => {
         },
       });
 
-      tl.from(".texttt", { y: 50, opacity: 0, duration: 200 });
-      tl.to(".texttt", { opacity: 0, duration: 200 });
+      tl.from(".texttt", { y: 50, opacity: 0, duration: 5000 });
+      tl.to(".texttt", { opacity: 0, duration: 5000 });
       tl.fromTo(".firstRowLeftCol", { x: "-150%" }, { x: 0, duration: 10000 });
       tl.fromTo(
         ".firstRowRightCol",
@@ -34,44 +34,44 @@ const About = () => {
         { opacity: 1, duration: 10000 },
         "-=10000"
       );
-      tl.fromTo(".secondRowLeftCol", { x: "-150%" }, { x: 0, duration: 1000 });
+      tl.fromTo(".secondRowLeftCol", { x: "-150%" }, { x: 0, duration: 10000 });
       tl.fromTo(
         ".secondRowRightCol",
         { x: "150%" },
-        { x: 0, duration: 1000 },
-        "-=1000"
+        { x: 0, duration: 10000 },
+        "-=10000"
       );
       tl.fromTo(
         ".secondRowText",
         { opacity: 0 },
-        { opacity: 1, duration: 1000 },
-        "-=1000"
+        { opacity: 1, duration: 10000 },
+        "-=10000"
       );
-      tl.fromTo(".thirdRowLeftCol", { x: "-150%" }, { x: 0, duration: 1000 });
+      tl.fromTo(".thirdRowLeftCol", { x: "-150%" }, { x: 0, duration: 10000 });
       tl.fromTo(
         ".thirdRowRightCol",
         { x: "150%" },
-        { x: 0, duration: 1000 },
-        "-=1000"
+        { x: 0, duration: 10000 },
+        "-=10000"
       );
       tl.fromTo(
         ".thirdRowText",
         { opacity: 0 },
-        { opacity: 1, duration: 1000 },
-        "-=1000"
+        { opacity: 1, duration: 10000 },
+        "-=10000"
       );
-      tl.fromTo(".fourthRowLeftCol", { x: "-150%" }, { x: 0, duration: 1000 });
+      tl.fromTo(".fourthRowLeftCol", { x: "-150%" }, { x: 0, duration: 10000 });
       tl.fromTo(
         ".fourthRowRightCol",
         { x: "150%" },
-        { x: 0, duration: 1000 },
-        "-=1000"
+        { x: 0, duration: 10000 },
+        "-=10000"
       );
       tl.fromTo(
         ".fourthRowText",
         { opacity: 0 },
-        { opacity: 1, duration: 1000 },
-        "-=1000"
+        { opacity: 1, duration: 10000 },
+        "-=10000"
       );
     });
     return () => ctx.revert();

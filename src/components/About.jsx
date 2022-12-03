@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import zdjecie from "../Image/zdjecie.jpg";
 import pillars from "../Image/pillars.webp";
+import column from "../Image/column.webp";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -36,26 +37,84 @@ const About = () => {
 
   return (
     <div>
-      {/* <div className="first flex justify-center items-center h-screen w-screen bg-light dark:bg-dark">
-        <h1 className="texttt text-5xl">Hello Hello</h1>
-      </div> */}
       <div className="first relative h-screen w-screen font-main bg-light dark:bg-dark">
         <h1 className="texttt absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           About me
         </h1>
-        <div className="next relative h-screen text-3xl">
-          <img
-            className="filarLeft absolute left-0 -translate-x-1/2 top-1/2 rotate-90 -translate-y-1/2"
-            src={pillars}
-          ></img>
-          <img
-            className="filarRight absolute right-0 translate-x-1/2 bottom-1/2 rotate-[-90deg] translate-y-1/2"
-            src={pillars}
-          ></img>
+        <div className="filarLeft grid grid-rows-6 grid-cols-4 h-screen w-screen bg-black">
+          {/* First Row */}
+          <div className="flex justify-start col-start-1 row-start-2">
+            <img
+              className="object-contain h-full rotate-90"
+              alt="column"
+              src={column}
+            />
+          </div>
+          <div className="flex justify-center items-center col-start-2 row-start-2 col-span-2 text-light">
+            <h1>Creative</h1>
+          </div>
+          <div className="flex justify-end col-start-4 row-start-2">
+            <img
+              className="object-contain h-full rotate-[270deg]"
+              src={column}
+              alt="column"
+            />
+          </div>
+          {/* Second Row */}
+          <div className="flex justify-start col-start-1 row-start-3">
+            <img
+              className="object-contain h-full rotate-90"
+              alt="column"
+              src={column}
+            />
+          </div>
+          <div className="flex justify-center items-center col-start-2 row-start-3 col-span-2 text-light">
+            <h1>Creative</h1>
+          </div>
+          <div className="flex justify-end col-start-4 row-start-3">
+            <img
+              className="object-contain h-full rotate-[270deg]"
+              src={column}
+              alt="column"
+            />
+          </div>
+          {/* Third Row */}
+          <div className="flex justify-start col-start-1 row-start-4">
+            <img
+              className="object-contain h-full rotate-90"
+              alt="column"
+              src={column}
+            />
+          </div>
+          <div className="flex justify-center items-center col-start-2 row-start-4 col-span-2 text-light">
+            <h1>Creative</h1>
+          </div>
+          <div className="flex justify-end col-start-4 row-start-4">
+            <img
+              className="object-contain h-full rotate-[270deg]"
+              src={column}
+              alt="column"
+            />
+          </div>
+          {/* Fourth Row */}
+          <div className="flex justify-start col-start-1 row-start-5">
+            <img
+              className="object-contain h-full rotate-90"
+              alt="column"
+              src={column}
+            />
+          </div>
+          <div className="flex justify-center items-center col-start-2 row-start-5 col-span-2 text-light">
+            <h1>Creative</h1>
+          </div>
+          <div className="flex justify-end col-start-4 row-start-5">
+            <img
+              className="object-contain h-full rotate-[270deg]"
+              src={column}
+              alt="column"
+            />
+          </div>
         </div>
-        {/* <div className="next absolute flex justify-center items-center h-full text-3xl max-h-screen">
-          <img src={zdjecie}></img>
-        </div> */}
       </div>
     </div>
   );

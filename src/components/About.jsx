@@ -18,7 +18,6 @@ const About = () => {
           // end: "+=400",
         },
       });
-
       tl.from(".texttt", { y: 50, opacity: 0, duration: 5000 });
       tl.to(".texttt", { opacity: 0, duration: 5000 });
       tl.fromTo(".firstRowLeftCol", { x: "-150%" }, { x: 0, duration: 10000 });
@@ -78,12 +77,12 @@ const About = () => {
   }, []);
 
   return (
-    <div>
-      <div className="first relative h-screen w-screen font-main bg-light dark:bg-dark">
+    <div className="bg-light dark:bg-dark">
+      <div className="first relative h-screen w-screen font-main bg-light dark:text-light dark:bg-dark">
         <h1 className="texttt absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           About me
         </h1>
-        <div className="grid grid-rows-6 grid-cols-4 h-screen w-screen text-black">
+        <div className="grid grid-rows-6 grid-cols-4 h-screen w-screen dark:text-light text-black">
           {/* First Row */}
           <div className="flex justify-start col-start-1 row-start-2">
             <img

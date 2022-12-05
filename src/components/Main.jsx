@@ -9,6 +9,10 @@ import { TbMoon } from "react-icons/tb";
 import SplitType from "split-type";
 import gsap from "gsap";
 const Main = () => {
+  document.body.style.overflow = "hidden";
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 3000);
   const wrapper = useRef();
   const [theme, setTheme] = useState("light");
   const [backgroundImage, setBackgroundImage] = useState(true);

@@ -9,19 +9,14 @@ import { TbMoon } from "react-icons/tb";
 import SplitType from "split-type";
 import gsap from "gsap";
 const Main = () => {
-  document.body.style.overflow = "hidden";
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 3000);
   const wrapper = useRef();
   const [theme, setTheme] = useState("light");
   const [backgroundImage, setBackgroundImage] = useState(true);
 
-  // Preload
-  // window.addEventListener("load", function () {
-  //   var loader = document.querySelector(".preload");
-  //   loader.classList.add("hidden");
-  // });
+  // Zmiana theme
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   useEffect(() => {
     // Funkcja zmiany background i trybu dark
@@ -33,9 +28,6 @@ const Main = () => {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   useEffect(() => {
     // Funkcja navbaru
@@ -53,6 +45,12 @@ const Main = () => {
   });
 
   useEffect(() => {
+    // Właczenie scrollowania
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+    }, 3000);
+
     // Animacje
     const nameSplit = new SplitType("#name");
     const jobSplit = new SplitType("#job");

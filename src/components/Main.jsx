@@ -116,19 +116,18 @@ const Main = () => {
   }, []);
 
   const logo = document.querySelectorAll("#logo path");
-  console.log(logo);
   for (let i = 0; i < logo.length; i++) {
     console.log(`letter ${i} is ${logo[i].getTotalLength()}`);
   }
   return (
     <div
-      className="w-screen h-screen font-main"
+      className="w-screen h-screen font-second font-semibold"
       style={{
         backgroundImage: `url(${backgroundImage ? bg : bgDark})`,
       }}
     >
       {/* Preaload */}
-      <div className="preload fixed w-screen h-screen flex justify-center items-center p-16 bg-light z-[100] text-5xl">
+      <div className="preload fixed w-screen h-screen flex justify-center items-center p-16 bg-light z-[100]">
         <svg
           id="preloadText"
           width="450"
@@ -272,7 +271,7 @@ const Main = () => {
         </header>
       </div>
       <footer className="absolute bottom-0 w-full h-40 px-4 hidden md:flex md:justify-center md:items-center lg:px-20">
-        <h1 className="email font-main text-2xl dark:text-light xl:text-4xl">
+        <h1 className="email text-2xl dark:text-light xl:text-4xl">
           jakubpaszko01@gmail.com
         </h1>
         <div

@@ -11,6 +11,7 @@ module.exports = {
     },
     fontFamily: {
       main: ["Old Standard TT"],
+      second: ["Poiret One"],
     },
   },
   plugins: [],

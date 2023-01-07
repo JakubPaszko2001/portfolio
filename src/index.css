@@ -66,3 +66,14 @@
     stroke-dashoffset: 0;
   }
 }
+
+.projects {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 400vw;
+  height: 100vh;
+}
+.panel {
+  width: 100vw;
+  height: 100vh;
+}

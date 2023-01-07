@@ -121,7 +121,7 @@ const Main = () => {
   }
   return (
     <div
-      className="w-screen h-screen font-second font-semibold"
+      className="w-full h-screen font-second font-semibold"
       style={{
         backgroundImage: `url(${backgroundImage ? bg : bgDark})`,
       }}

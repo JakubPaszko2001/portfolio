@@ -1,6 +1,6 @@
 import Main from "./components/Main";
 import About from "./components/About";
-import Projects from "./components/Projects";
+import Works from "./components/Works";
 import Contact from "./components/Contact";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App overflow-hidden">
       <Main />
       <About />
-      {/* <Projects /> */}
+      {/* <Works /> */}
       {/* <Contact /> */}
     </div>
   );

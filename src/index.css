@@ -70,7 +70,7 @@
 .projects {
   display: flex;
   flex-wrap: nowrap;
-  width: 400vw;
+  width: 500vw;
   height: 100vh;
 }
 .panel {

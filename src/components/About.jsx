@@ -101,7 +101,7 @@ const About = () => {
         "-=10000"
       );
       tl.to(".kontener", { opacity: 0, duration: 10000, delay: 10000 });
-      tl.from(".projects", { y: 50, opacity: 0, duration: 10000 }, "+=10000");
+      tl.from(".projects", { opacity: 0, duration: 10000 }, "+=10000");
     });
     return () => ctx.revert();
   }, []);

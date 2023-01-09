@@ -24,7 +24,7 @@ const Works = () => {
   }, []);
   return (
     <div className="projects">
-      <div className="panel relative bg-light dark:bg-dark">
+      <div className="panel relative bg-red-500 dark:bg-dark">
         <svg
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[30rem] dark:opacity-0"
           width="60vw"

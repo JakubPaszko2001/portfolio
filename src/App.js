@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App overflow-hidden">
       <Main />
-      {/* <About /> */}
-      <Works />
+      <About />
+      {/* <Works /> */}
       {/* <Contact /> */}
     </div>
   );

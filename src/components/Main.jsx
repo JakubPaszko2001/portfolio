@@ -279,9 +279,9 @@ const Main = () => {
           className="darkModeIcon absolute right-4 cursor-pointer lg:right-20"
         >
           {backgroundImage ? (
-            <TbMoon className="p-2 rounded-md text-5xl text-light bg-dark hover:text-yellow-500" />
+            <TbMoon className="p-2 rounded-md text-5xl text-light bg-dark transition-all duration-200 hover:text-yellow-500" />
           ) : (
-            <ImSun className="p-2 rounded-md text-5xl text-dark bg-light hover:text-yellow-500" />
+            <ImSun className="p-2 rounded-md text-5xl text-dark bg-light transition-all duration-200 hover:text-yellow-500" />
           )}
         </div>
       </footer>

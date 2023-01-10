@@ -258,13 +258,13 @@ const About = () => {
             <h1 className="firstRowText text-2xl lg:hidden">Creative</h1>
             <div className="firstRowText text-2xl hidden lg:flex lg:flex-col lg:justify-center lg:items-center">
               <h1>C</h1>
-              <h1>R</h1>
-              <h1>E</h1>
-              <h1>A</h1>
-              <h1>T</h1>
-              <h1>I</h1>
-              <h1>V</h1>
-              <h1>E</h1>
+              <h1>r</h1>
+              <h1>e</h1>
+              <h1>a</h1>
+              <h1>t</h1>
+              <h1>i</h1>
+              <h1>v</h1>
+              <h1>e</h1>
             </div>
           </div>
           <div className="flex justify-end col-start-4 row-start-2 lg:col-start-2 lg:row-start-5 lg:rotate-90 lg:row-span-2">
@@ -283,16 +283,17 @@ const About = () => {
             />
           </div>
           <div className="flex justify-center items-center col-start-2 row-start-3 col-span-2 lg:col-start-3 lg:row-start-3 lg:col-span-1 lg:row-span-2">
-            <h1 className="secondRowText text-2xl lg:hidden">Creative</h1>
+            <h1 className="secondRowText text-2xl lg:hidden">Ambicious</h1>
             <div className="secondRowText text-2xl hidden lg:flex lg:flex-col lg:justify-center lg:items-center">
-              <h1>C</h1>
-              <h1>R</h1>
-              <h1>E</h1>
               <h1>A</h1>
-              <h1>T</h1>
-              <h1>I</h1>
-              <h1>V</h1>
-              <h1>E</h1>
+              <h1>m</h1>
+              <h1>b</h1>
+              <h1>i</h1>
+              <h1>c</h1>
+              <h1>i</h1>
+              <h1>o</h1>
+              <h1>u</h1>
+              <h1>s</h1>
             </div>
           </div>
           <div className="flex justify-end col-start-4 row-start-3 lg:col-start-3 lg:row-start-5 lg:rotate-90 lg:row-span-2">
@@ -311,16 +312,17 @@ const About = () => {
             />
           </div>
           <div className="flex justify-center items-center col-start-2 row-start-4 col-span-2 lg:col-start-4 lg:row-start-3 lg:col-span-1 lg:row-span-2">
-            <h1 className="thirdRowText text-2xl lg:hidden">Creative</h1>
+            <h1 className="thirdRowText text-2xl lg:hidden">Ingenious</h1>
             <div className="thirdRowText text-2xl hidden lg:flex lg:flex-col lg:justify-center lg:items-center">
-              <h1>C</h1>
-              <h1>R</h1>
-              <h1>E</h1>
-              <h1>A</h1>
-              <h1>T</h1>
               <h1>I</h1>
-              <h1>V</h1>
-              <h1>E</h1>
+              <h1>n</h1>
+              <h1>g</h1>
+              <h1>e</h1>
+              <h1>n</h1>
+              <h1>i</h1>
+              <h1>o</h1>
+              <h1>u</h1>
+              <h1>s</h1>
             </div>
           </div>
           <div className="flex justify-end col-start-4 row-start-4 lg:col-start-4 lg:row-start-5 lg:rotate-90 lg:row-span-2">
@@ -339,16 +341,16 @@ const About = () => {
             />
           </div>
           <div className="flex justify-center items-center col-start-2 row-start-5 col-span-2 lg:col-start-5 lg:row-start-3 lg:col-span-1 lg:row-span-2">
-            <h1 className="fourthRowText text-2xl lg:hidden">Creative</h1>
+            <h1 className="fourthRowText text-2xl lg:hidden">Accurate</h1>
             <div className="fourthRowText text-2xl hidden lg:flex lg:flex-col lg:justify-center lg:items-center">
-              <h1>C</h1>
-              <h1>R</h1>
-              <h1>E</h1>
               <h1>A</h1>
-              <h1>T</h1>
-              <h1>I</h1>
-              <h1>V</h1>
-              <h1>E</h1>
+              <h1>c</h1>
+              <h1>c</h1>
+              <h1>u</h1>
+              <h1>r</h1>
+              <h1>a</h1>
+              <h1>t</h1>
+              <h1>e</h1>
             </div>
           </div>
           <div className="flex justify-end col-start-4 row-start-5 lg:col-start-5 lg:row-start-5 lg:rotate-90 lg:row-span-2">
